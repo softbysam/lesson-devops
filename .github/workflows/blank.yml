@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - if: runner.os == 'Windows'
-        run: echo "Os is Windows"
+        run: echo OS is $RUNNER_OS 
       - if: runner.os != 'Windows'
-        run: echo Os is not Windows, it is $RUNNER_OS
+        run: echo OS is not Windows, it is $RUNNER_OS
