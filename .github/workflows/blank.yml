@@ -12,6 +12,6 @@ jobs:
 
     steps:
       - if: runner.os == 'Windows'
-        run: echo "test=hello\nworld" >> $GITHUB_OUTPUT
+        run: echo "Os is Windows"
       - if: runner.os != 'Windows'
         run: echo Os is not Windows, it is $RUNNER_OS
