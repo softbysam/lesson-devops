@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  if-windows-els:
+  if-windows-else:
     runs-on: ubuntu-latest
 
     steps:
