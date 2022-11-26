@@ -13,5 +13,4 @@ jobs:
     steps:
       - id: first
         run: echo "test=hello" >> $GITHUB_OUTPUT
-      - name: print value
-        run: echo ${{ steps.first.outputs.test }}
+      - run: echo ${{ steps.first.outputs.test }}
