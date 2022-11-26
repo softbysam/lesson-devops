@@ -2,15 +2,16 @@ name: lesson
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  myjob:
+  if-windows-els:
     runs-on: ubuntu-latest
 
     steps:
-      - id: first
+      - if: runner.os == 'Windows'
         run: echo "test=hello\nworld" >> $GITHUB_OUTPUT
-      - run: echo ${{ steps.first.outputs.test }}
+      - if: runner.os != 'Windows'
+        run: echo Os is not Windows, it is $RUNNER_OS
