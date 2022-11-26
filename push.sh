@@ -1,1 +1,0 @@
-git commit -am "build" && git push
