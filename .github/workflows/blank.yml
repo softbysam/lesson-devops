@@ -12,5 +12,5 @@ jobs:
 
     steps:
       - id: first
-        run: echo "test=hello" >> $GITHUB_OUTPUT
+        run: echo "test=hello\world" >> $GITHUB_OUTPUT
       - run: echo ${{ steps.first.outputs.test }}
